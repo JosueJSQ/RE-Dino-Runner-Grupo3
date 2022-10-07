@@ -3,12 +3,12 @@ from dino_runner.utils.constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 
 FONT_STYLE='freesansbold.ttf'
-black_color=(0,0,0)
+black_color=(255, 255, 255)
 
 def get_score_element(points):
     font = pygame.font.Font(FONT_STYLE,20)
 
-    text =font.render('Points:'+str(points),True,black_color)
+    text =font.render(' Points:' +' '+ str(points),True,black_color)
     text_rect=text.get_rect()
     text_rect.center=(1000,40)
 

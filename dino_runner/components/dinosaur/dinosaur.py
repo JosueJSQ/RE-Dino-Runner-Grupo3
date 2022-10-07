@@ -1,3 +1,4 @@
+from turtle import Screen
 import pygame
 from dino_runner.utils.constants import RUNNING, DUCKING, JUMPING,DEFAULT_TYPE,SHIELD_TYPE,DUCKING_SHIELD,RUNNING_SHIELD,JUMPING_SHIELD
 from pygame.sprite import Sprite
@@ -103,9 +104,9 @@ class Dinosaur(Sprite):
             if time_to_show >=0:
                 if self.show_text:
                     fond=pygame.font.Font('freesansbold.ttf',18)
-                    text=fond.render(f'shield enable for{time_to_show}',True,(0,0,0))
+                    text=fond.render(f'shield enable for {time_to_show}',True,(0,0,0))
                     text_rect=text.get_rect()
-                    text_rect.center(500,40)
+                    text_rect.center=(500,40)
                     screen.blit(text,text_rect)
             else:
                self.shield=False
